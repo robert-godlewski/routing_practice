@@ -23,5 +23,10 @@ def repeat(times, phrase):
         i += 1
     return str_phrase
 
+@app.route('/<blah>')
+def error(blah):
+    if blah != 'dojo' or 'say/' or 'repeat/': 
+        return "Sorry! No response. Try again."
+
 
 if __name__=="__main__": app.run(debug=True)
